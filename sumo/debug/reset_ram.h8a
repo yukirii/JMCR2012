@@ -1,0 +1,7 @@
+"C:\Users\shiftky\Desktop\workspace\sumo\reset_ram.mar"
+-cpu=300HA:20
+-object="C:\Users\shiftky\Desktop\workspace\sumo\debug\reset_ram.obj"
+-nolist
+-nologo
+-chgincpath
+-errorpath

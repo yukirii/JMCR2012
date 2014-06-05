@@ -1,0 +1,39 @@
+;	reset_ram
+
+	.CPU 300HA:20
+
+	.IMPORT _main
+	.IMPORT _wait0_1ms
+;	.IMPORT _wait1_1ms
+;	.IMPORT _timer0
+;	.IMPORT _timer1
+;	.IMPORT _timer3
+;	.IMPORT _itu0
+;	.IMPORT _itu3
+;	.IMPORT _wdt_timer
+
+;	.SECTION VECT,DATA,LOCATE=H'0ff000
+	.SECTION VECT,DATA,LOCATE=H'000000
+
+;	.DATA.L H'0ff100
+	.DATA.L H'000100 ;リセットベクトル
+
+;	.ORG	H'000050
+;	.DATA.L	_wdt_timer
+	
+	.ORG	H'000060
+	.DATA.L _wait0_1ms
+;	.DATA.L _timer0
+
+;	.ORG	H'000070
+;	.DATA.L _wait1_1ms
+;	.DATA.L _timer1
+		
+	.ORG	H'000100
+	.section P,code ;,LOCATE=H'0FF100   
+
+	MOV.L	#H'0FFF00,ER7 ;スタックポインタ設定
+	ldc.b	#0,ccr
+	jmp	@_main
+
+	.END                              

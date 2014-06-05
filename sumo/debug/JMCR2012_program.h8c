@@ -1,0 +1,12 @@
+-cpu=300HA:20
+-stack=small
+-include="C:\Program Files (x86)\Renesas\Hew"
+-object="C:\Users\shiftky\Desktop\workspace\sumo\debug\JMCR2012_program.obj"
+-debug
+-nolist
+-speed=register,switch,shift,struct,expression,loop=2
+-volatile
+-chgincpath
+"C:\Users\shiftky\Desktop\workspace\sumo\JMCR2012_program.c"
+-lang=c
+-nologo

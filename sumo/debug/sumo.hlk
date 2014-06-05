@@ -1,0 +1,14 @@
+-noprelink
+-nomessage
+-nooptimize
+-start=P,C/0100,B/0FFA00
+-nologo
+-input="C:\Users\shiftky\Desktop\workspace\sumo\debug\reset_ram.obj"
+-input="C:\Users\shiftky\Desktop\workspace\sumo\debug\JMCR2012_program.obj"
+-library="C:\Program Files (x86)\Renesas\Hew\te.lib"
+-output="C:\Users\shiftky\Desktop\workspace\sumo\debug\sumo.abs"
+-end
+-input="C:\Users\shiftky\Desktop\workspace\sumo\debug\sumo.abs"
+-form=stype
+-output="C:\Users\shiftky\Desktop\workspace\sumo\debug\sumo.mot"
+-exit
